@@ -4,11 +4,13 @@ class User {
 		this.favoriteBand = favoriteBand;
 	}
 
-	favoriteBandMatches(bands) {
-		return bands.filter(function(band) {
-			return band == this.favoriteBand;
-		})[0];
-	}
+    favoriteBandMatches(bands) {
+        console.log('in User scope: ', this.favoriteBand);
+        return bands.filter(function(band) {
+            console.log('in the anonymous function scope: ', this.favoriteBand);
+            return band == this.favoriteBand;
+        })[0];
+    }
 }
 
 let billy = new User('billy', 'paul simon');
