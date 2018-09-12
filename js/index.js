@@ -5,7 +5,6 @@ function greet(customerOne, customerTwo) {
 
 let sally = { name: 'Sally' };
 
-greet.apply(sally);
-// my name is Sally, hi!
 
-greet.call(sally);
+greet.call(sally, 'Terry', 'George');
+
