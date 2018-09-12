@@ -12,4 +12,5 @@ class User {
 }
 
 let billy = new User('billy', 'paul simon');
-billy.favoriteBandMatches(['paul simon', 'the kooks']);
+let favs = favoriteBandMatches.bind(billy);
+favs(['paul simon', 'the kooks']);
