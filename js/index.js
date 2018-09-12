@@ -9,7 +9,8 @@ class User {
         return bands.filter(function(band) {
             console.log('in the anonymous function scope: ', this.favoriteBand);
             return band == this.favoriteBand;
-        })[0];
+        }.bind(this)
+    )[0];
     }
 }
 
